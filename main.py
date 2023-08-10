@@ -6,6 +6,10 @@ import asyncio
 import aio_pika
 from bson import ObjectId
 
+import dns.resolver
+dns.resolver.default_resolver=dns.resolver.Resolver(configure=False)
+dns.resolver.default_resolver.nameservers=['8.8.8.8']
+
 # crawler_manager = CrawlerManager()
 
 # # http://catalogpwwlccc5nyp3m3xng6pdx3rdcknul57x6raxwf4enpw3nymqd.onion/buy/1696
